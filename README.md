@@ -1,1 +1,1 @@
-# PowerShell
+# PowerShell scripts from PluralSight
