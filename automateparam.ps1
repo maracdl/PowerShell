@@ -6,7 +6,7 @@ Param(
     [string]$ReportTitle = "Event Log Report",
     [Parameter(Mandatory, HelpMessage = "Enter the path for the HTML file.")]
     [string]$Path
-)
+)   
 
 #get event Log data and group it
 $data = Get-EventLog -LogName $Log -EntryType Error -Newest $Newest -ComputerName $ComputerName |

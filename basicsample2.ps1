@@ -1,7 +1,7 @@
 #Step1 Run HardCoded command
 Get-Service -ComputerName MARADIAS |
                 Where-Object -Property Status -EQ 'Stopped'
- 
+
 #Step2 Add variables
 $ComputerName = "MARADIAS"
 
