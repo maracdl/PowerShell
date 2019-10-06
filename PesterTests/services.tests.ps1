@@ -5,19 +5,21 @@ param(
     )
 )
 
-describe 'Operating System' {
-    context 'Service Availability' {
-        it 'Eventlog is running' {
+Describe 'Operating System' -Tag 'OS' {
+    Context 'Service Availability' {
+
+        It 'Eventlog is running' {
             $svc = Get-Service -Name Eventlog
             $svc.Status | Should Be running
         }
     }
 }
 
-describe 'Operating System' {
-    context 'Service Availability' {
+Describe 'Operating System' -Tag 'OS1' {
+    Context 'Service Availability' {
+
         $Services | ForEach-Object {
-            it "[$_] should be running" {
+            It "[$_] should be running" {
                 (Get-Service $_).Status | Should Be running
             }
         }
